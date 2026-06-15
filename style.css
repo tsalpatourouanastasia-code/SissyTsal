@@ -1,0 +1,83 @@
+:root {
+  --font: "Times New Roman", Times, serif;
+  --font-size: 14px;
+  --line: 1.22;
+  --thumb-w: 72px;
+  --side-w: 190px;
+  --info-w: 245px;
+  --image-max-w: 700px;
+  --image-max-h: 760px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #fff; color: #000; }
+body { font-family: var(--font); font-size: var(--font-size); line-height: var(--line); }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background-image: url("images/site-background.png"); background-repeat: no-repeat; background-position: center center; background-size: cover; opacity: 0.10; }
+body.cv-body::before { background-image: url("images/site-background.png"); }
+a { color: #000; text-decoration: none; }
+a:hover, button:hover { text-decoration: underline; }
+
+.site-shell { display: grid; grid-template-columns: var(--side-w) 1fr; min-height: 100vh; }
+.sidebar { position: sticky; top: 0; height: 100vh; padding: 14px 12px; overflow: auto; border-right: 0; }
+.site-header { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; margin-bottom: 22px; }
+.artist-name, .cv-link { font-size: 12px; }
+.project-list { display: flex; flex-direction: column; gap: 17px; padding-bottom: 30px; }
+.project-button { appearance: none; background: transparent; border: 0; padding: 0; margin: 0; text-align: left; cursor: pointer; font-family: var(--font); font-size: 12px; line-height: 1.1; width: 100%; }
+.project-button.is-active { text-decoration: underline; }
+.project-thumb { width: var(--thumb-w); max-height: 62px; object-fit: contain; object-position: left center; display: block; margin-bottom: 3px; }
+.project-title-small { display: block; max-width: 120px; }
+.project-year-small { display: block; }
+.contact { display: none; }
+.contact:empty { display: none; }
+
+.viewer { display: grid; grid-template-columns: var(--info-w) minmax(0, 1fr); gap: 28px; padding: 14px 22px; align-items: start; }
+.project-info { position: sticky; top: 14px; white-space: pre-wrap; max-width: var(--info-w); font-size: 12px; }
+.project-info .title { text-transform: none; margin: 0 0 8px 0; font-size: 12px; font-weight: normal; }
+.project-info .details { margin: 0 0 12px 0; }
+.project-info .text { margin: 0; }
+.project-view { min-height: 80vh; }
+
+.carousel { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 7px; }
+.carousel.project-reflections { gap: 34px; }
+.carousel.project-reflections .carousel-image { max-width: 420px; max-height: 460px; }
+.carousel.project-kethea-ithaki .carousel-image { max-width: 420px; max-height: 480px; }
+.carousel-image-wrap { min-height: 220px; display: flex; align-items: flex-start; justify-content: flex-start; }
+.carousel-image { max-width: var(--image-max-w); max-height: var(--image-max-h); width: auto; height: auto; object-fit: contain; display: block; image-rendering: auto; }
+.carousel-controls { display: flex; gap: 12px; align-items: center; font-family: var(--font); font-size: 12px; }
+.carousel-controls button { appearance: none; border: 0; background: transparent; padding: 0; font-family: var(--font); font-size: 12px; cursor: pointer; }
+
+.word-layout { max-width: 680px; }
+.word-layout img { display: block; height: auto; object-fit: contain; }
+.word-hero { width: 465px; max-width: 100%; margin: 0 0 14px 0; }
+.word-wide { width: 550px; max-width: 100%; margin: 0 0 22px 0; }
+.word-row { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 45px 38px; }
+.word-row img { width: 165px; }
+.word-small-centered { width: 175px; margin: 45px auto 28px auto; }
+.word-text-centered { max-width: 490px; text-align: center; white-space: pre-wrap; margin: 25px 0 55px 0; font-size: 12px; }
+.word-video-grid { display: grid; grid-template-columns: 185px 185px; gap: 20px 28px; margin: 0 0 20px 0; }
+.word-video-grid img { width: 185px; }
+.word-caption { white-space: pre-wrap; text-align: center; margin-top: 18px; }
+
+.cv-page { padding: 14px 12px; max-width: 980px; }
+.cv-header { max-width: 760px; }
+.cv-layout { display: grid; grid-template-columns: 110px minmax(0, 720px); gap: 22px; align-items: start; margin-top: 34px; }
+.cv-photo { width: 90px; height: auto; display: block; }
+.cv-text { max-width: 720px; margin-top: 0; white-space: normal; font-size: 14px; line-height: 1.25; }
+.cv-text h1 { font-size: 14px; font-weight: normal; margin: 0 0 14px 0; }
+.cv-text h2 { font-size: 14px; font-weight: normal; margin: 28px 0 14px 0; }
+.cv-contact { margin-top: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.instagram-mark { display: inline-block; width: 14px; height: 14px; border: 1px solid #000; border-radius: 4px; margin-right: 6px; vertical-align: -2px; position: relative; }
+.instagram-mark::after { content: ""; position: absolute; width: 4px; height: 4px; border: 1px solid #000; border-radius: 50%; left: 4px; top: 4px; }
+.cv-text p { margin: 0; }
+
+@media (max-width: 760px) {
+  .site-shell { grid-template-columns: 1fr; }
+  .sidebar { position: relative; height: auto; padding-bottom: 8px; }
+  .project-list { flex-direction: row; overflow-x: auto; gap: 14px; padding-bottom: 8px; }
+  .project-button { width: 80px; flex: 0 0 80px; }
+  .viewer { grid-template-columns: 1fr; padding: 12px; gap: 16px; }
+  .project-info { position: relative; top: 0; max-width: 100%; }
+  .carousel-image { max-width: 92vw; max-height: 480px; }
+  .cv-layout { grid-template-columns: 1fr; }
+}
+
