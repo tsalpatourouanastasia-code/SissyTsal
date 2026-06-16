@@ -134,3 +134,18 @@ function escapeHtml(value) {
 }
 
 init();
+
+document.addEventListener('keydown', function(event) {
+  const activeProject = document.querySelector('.project-item.active');
+  if (!activeProject) return;
+
+  if (event.key === 'ArrowRight') {
+    const nextButton = document.getElementById('nextImage');
+    if (nextButton) nextButton.click();
+  }
+
+  if (event.key === 'ArrowLeft') {
+    const prevButton = document.getElementById('prevImage');
+    if (prevButton) prevButton.click();
+  }
+});
