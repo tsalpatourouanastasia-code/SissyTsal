@@ -169,7 +169,7 @@ const projects = [
       
       "images/kethea-ithaki/10.jpg",
       "images/kethea-ithaki/11.jpg",
-      "images/kethea-ithaki/12.jpg",
+      
       "images/kethea-ithaki/13.jpg",
       
       
