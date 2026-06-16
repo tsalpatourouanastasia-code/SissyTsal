@@ -135,6 +135,18 @@ function escapeHtml(value) {
 
 init();
 
+document.addEventListener("keydown", function(event) {
+  if (event.key === "ArrowLeft") {
+    const prev = document.getElementById("prevImage");
+    if (prev) prev.click();
+  }
+
+  if (event.key === "ArrowRight") {
+    const next = document.getElementById("nextImage");
+    if (next) next.click();
+  }
+});
+
 document.addEventListener('keydown', function(event) {
   const activeProject = document.querySelector('.project-item.active');
   if (!activeProject) return;
