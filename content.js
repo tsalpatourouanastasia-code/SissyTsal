@@ -15,9 +15,9 @@ const projects = [
     "layout": "carousel",
     "images": [
       "images/notes-in-progress/01.jpg",
-      "images/notes-in-progress/02.jpg",
+      
       "images/notes-in-progress/03.jpg",
-      "images/notes-in-progress/04.jpg",
+      
       "images/notes-in-progress/05.jpg",
       
       "images/notes-in-progress/07.jpg",
@@ -98,7 +98,7 @@ const projects = [
   },
   {
     "id": "reflections",
-    "title": "ΑΝΑΣΤΟΧΑΣΜΟΙ / REFLECTIONS",
+    "title": "REFLECTIONS",
     "year": "2022",
     "details": "o Έκθεση για εγκαίνια AΑΔΕ&Α.Π.Θ 2022\nΧωρίς Τίτλο (2022)\n{αυτοξηρούμενος πηλός ,μαξιλάρι, διαστάσεις μεταβλητές}",
     "text": "",
