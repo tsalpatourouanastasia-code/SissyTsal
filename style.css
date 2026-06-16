@@ -10,9 +10,9 @@
 }
 
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: #fff; color: #000; }
+html, body { margin: 0; padding: 0; background: #fff; color: #f8e8ee; }
 body { font-family: var(--font); font-size: var(--font-size); line-height: var(--line); }
-body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background-image: url("images/site-background.png"); background-repeat: no-repeat; background-position: center center; background-size: cover; opacity: 0.10; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background-image: url("images/site-background.png"); background-repeat: yes-repeat; background-position: center center; background-size: cover; opacity: 0.10; }
 body.cv-body::before { background-image: url("images/site-background.png"); }
 a { color: #000; text-decoration: none; }
 a:hover, button:hover { text-decoration: underline; }
